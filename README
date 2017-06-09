@@ -1,0 +1,24 @@
+|-|*|-|_|-|*|-|_|-|*|-|_|-|*|-|_|-|*|-|Image Steganography by encoding secret message/file into the source image's LSB|-|*|-|_|-|*|-|_|-|*|-|_|-|
+
+Steganography is hiding a message in another message.
+This program hides a file into an image file(.bmp image) by encoding the file into LSbits of the source image file.
+Since the encoding is done on the LSbits, only a very small change is made to the pixel data and the colour change is not visible.
+While encoding the user can encrypt the message by giving a password.
+
+On decoding only the option "d" and the encoded file name can be specified.
+
+
+Running instructions:
+
+1.Run the make file in the main folder
+2.Run "stegno" with the arguments.
+3.For encoding:
+	<./stegno> -e <source.bmp> <secret_file> <output_file.bmp>
+	Encrypt(Y/N) ?
+	output_file.bmp will be created in current directory.
+4.For decoding:
+	<./stegno> -d <output_file.bmp>
+	If encrypted
+		Password :
+	
+	secret_file will be created in current directory.
